@@ -18,7 +18,7 @@ export default function Header() {
     ));
     return(
     <Head>
-        <HeaderName> Mônica's Restaurante</HeaderName>
+        <HeaderName>RESTAURANTE DA MÔNICA</HeaderName>
         <HeaderMenu>{renderList}</HeaderMenu>
     </Head>
     );
