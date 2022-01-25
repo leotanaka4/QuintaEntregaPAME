@@ -72,7 +72,7 @@ export default function Informacoes() {
             <QuantityButton onClick={Increment}>+</QuantityButton>
             <QuantityButton onClick={Decrement}>-</QuantityButton>
         </FooterQuantity>
-        <FooterEnviar onClick={Enviar} disabled={!available}>Adicionar</FooterEnviar>
+        <FooterEnviar onClick={Enviar} disabled={!available}>Alterar</FooterEnviar>
     </Footer>
     );
 }
