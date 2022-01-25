@@ -9,9 +9,7 @@ function App() {
   return (
     <Page>
       <Header/>
-      <Menu/>
       <Informacoes/>
-      <Suporte/>
     </Page>
   );
 }
