@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const MenuItem = styled.h3`
-    height: 5vh;
-    cursor: pointer;
-    &:hover{
-        color: antiquewhite;
-        border-bottom: 2px solid silver;
-    }
-`;
-
 export const Head = styled.header`
     display: flex;
     justify-content: space-between;
@@ -27,4 +18,13 @@ export const HeaderMenu = styled.ul`
     gap: 5vh;
     flex-direction: row;
     padding-right: 3%;
+`;
+
+export const MenuItem = styled.h3`
+    height: 5vh;
+    cursor: pointer;
+    &:hover{
+        color: antiquewhite;
+        border-bottom: 2px solid silver;
+    }
 `;
