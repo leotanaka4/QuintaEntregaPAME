@@ -36,88 +36,17 @@ export default function Informacoes() {
     const [nome, setNome] = useState("");
     const [actualItem, setActualItem] = useState({});
     const [available, setAvailable] = useState(false);
-
-    function Increment1(){
-        setQuantity1(quantity1 + 1)
+    
+    function increment(quantidade, funcao) {
+        funcao(quantidade + 1);
     }
-    function Decrement1(){
-        if (quantity1 === 0){
+    function decrement(quantidade, funcao) {
+        if (quantidade === 0){
             console.log("Erro ao diminuir a quantidade de alimentos")
         } else{
-            setQuantity1(quantity1 - 1)
+            funcao(quantidade - 1)
         }
     }
-    function Increment2(){
-        setQuantity1(quantity2 + 1)
-    }
-    function Decrement2(){
-        if (quantity2 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity2(quantity2 - 1)
-        }
-    }
-    function Increment3(){
-        setQuantity3(quantity3 + 1)
-    }
-    function Decrement3(){
-        if (quantity3 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity3(quantity3 - 1)
-        }
-    }
-    function Increment4(){
-        setQuantity4(quantity4 + 1)
-    }
-    function Decrement4(){
-        if (quantity4 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity4(quantity4 - 1)
-        }
-    }
-    function Increment5(){
-        setQuantity5(quantity5 + 1)
-    }
-    function Decrement5(){
-        if (quantity5 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity5(quantity5 - 1)
-        }
-    }
-    function Increment6(){
-        setQuantity6(quantity6 + 1)
-    }
-    function Decrement6(){
-        if (quantity6 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity6(quantity6 - 1)
-        }
-    }
-    function Increment7(){
-        setQuantity7(quantity7 + 1)
-    }
-    function Decrement7(){
-        if (quantity7 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity7(quantity7 - 1)
-        }
-    }
-    function Increment8(){
-        setQuantity8(quantity8 + 1)
-    }
-    function Decrement8(){
-        if (quantity8 === 0){
-            console.log("Erro ao diminuir a quantidade de alimentos")
-        } else{
-            setQuantity8(quantity8 - 1)
-        }
-    }
-
     function Pagar(){/*Simula o envio da Informação*/
         setQuantity1(0);
         setQuantity2(0);
@@ -141,7 +70,6 @@ export default function Informacoes() {
             q8: quantity8,
             cliente: nome
         });
-
         if (!nome || ((quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6 + quantity7 + quantity8) === 0)){
             setAvailable(false)
         } else{
@@ -161,8 +89,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity1}</Quantity>
-                    <QuantityButton onClick={Increment1}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement1}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity1, setQuantity1)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity1, setQuantity1)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -173,8 +101,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity2}</Quantity>
-                    <QuantityButton onClick={Increment2}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement2}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity2, setQuantity2)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity2, setQuantity2)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -188,8 +116,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity3}</Quantity>
-                    <QuantityButton onClick={Increment3}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement3}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity3, setQuantity3)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity3, setQuantity3)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -200,8 +128,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity4}</Quantity>
-                    <QuantityButton onClick={Increment4}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement4}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity4, setQuantity4)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity4, setQuantity4)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -212,8 +140,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity5}</Quantity>
-                    <QuantityButton onClick={Increment5}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement5}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity5, setQuantity5)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity5, setQuantity5)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -227,8 +155,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity6}</Quantity>
-                    <QuantityButton onClick={Increment6}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement6}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity6, setQuantity6)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity6, setQuantity6)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -238,9 +166,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 5,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity6}</Quantity>
-                    <QuantityButton onClick={Increment7}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement7}>-</QuantityButton>
+                    <Quantity>Quantidade: {quantity7}</Quantity>
+                    <QuantityButton onClick={() => increment(quantity7, setQuantity7)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity7, setQuantity7)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -254,8 +182,8 @@ export default function Informacoes() {
                 </InfoAlimento>
                 <QuantidadeAlimento>
                     <Quantity>Quantidade: {quantity8}</Quantity>
-                    <QuantityButton onClick={Increment8}>+</QuantityButton>
-                    <QuantityButton onClick={Decrement8}>-</QuantityButton>
+                    <QuantityButton onClick={() => increment(quantity8, setQuantity8)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(quantity8, setQuantity8)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>

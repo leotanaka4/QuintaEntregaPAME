@@ -7,7 +7,7 @@ export const Menu = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     width: 100%;
     background-color: white;
     gap: 4vh;

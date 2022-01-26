@@ -65,6 +65,7 @@ export default function Informacoes() {
                 placeholder="Senha"
                 value={senha}
                 onChange={(event) => setSenha(event.currentTarget.value)}
+                type="password"
             />
         </FooterMenu>
         <FooterQuantity>
