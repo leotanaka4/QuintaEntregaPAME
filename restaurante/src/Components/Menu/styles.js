@@ -18,7 +18,7 @@ export const Titulo = styled.h1`
 `;
 
 export const Subtitulo = styled.h2`
-
+    font-size: 40px;
 `;
 
 export const Secao = styled.div`

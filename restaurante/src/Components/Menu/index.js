@@ -142,7 +142,7 @@ export default function Informacoes() {
             cliente: nome
         });
 
-        if (!nome || (quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6 + quantity7 + quantity8) !== 0){
+        if (!nome || ((quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6 + quantity7 + quantity8) === 0)){
             setAvailable(false)
         } else{
             setAvailable(true)
