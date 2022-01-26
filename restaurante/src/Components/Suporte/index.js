@@ -13,7 +13,7 @@ import {
 export default function Informacoes() {
     const [idproduto, setIdproduto] = useState("");
     const [idfuncionario, setIdfuncionario] = useState("");
-    const [senha, setSenha] = useState("");
+    const [senha, setSenha] = useState(0);
     const [quantity, setQuantity] = useState(0);
     const [actualItem, setActualItem] = useState({});
     const [available, setAvailable] = useState(false);
@@ -41,7 +41,7 @@ export default function Informacoes() {
             quantidade: quantity
         });
 
-        if (!idproduto || !idfuncionario || !senha || quantity === 0){
+        if (!idproduto || !idfuncionario || senha !== "1234" || quantity === 0){
             setAvailable(false)
         } else{
             setAvailable(true)
