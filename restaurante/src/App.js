@@ -8,6 +8,7 @@ function App() {
   return (
     <Page>
       <Header/>
+      <Menu/>
       <Suporte/>
     </Page>
   );
