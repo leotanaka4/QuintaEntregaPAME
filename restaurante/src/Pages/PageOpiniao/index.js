@@ -1,11 +1,11 @@
 import Header from './../../Components/Header';
-import Informacoes from './../../Components/Menu'
+import Pesquisa from './../../Components/Pesquisa';
 
-export function PageMenu() {
+export function PageOpiniao() {
     return (
         <>
             <Header/>
-            <Informacoes/>
+            <Pesquisa/>
         </>
     )
 }

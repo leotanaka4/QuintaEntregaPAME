@@ -41,7 +41,7 @@ export default function Informacoes() {
             quantidade: quantity
         });
 
-        if (!idproduto || !idfuncionario || senha !== "1234" || quantity === 0){
+        if (!idproduto || !idfuncionario || !senha || quantity === 0){
             setAvailable(false)
         } else{
             setAvailable(true)

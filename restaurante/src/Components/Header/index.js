@@ -8,9 +8,9 @@ import {MenuItem, Head, HeaderName, HeaderMenu} from './styles';
 export default function Header() {
     const itensMenu = [
         {nome: "Home", icone: <AiOutlineHome/>, path: "/"},
-        {nome: "Menu", icone: <BsMenuUp/>, path: "/Menu"},
-        {nome: "Opinião", icone: <MdFeedback/>, path: "/Opiniao"},
-        {nome: "Suporte", icone: <BsGear/>, path: "/Suporte"},
+        {nome: "Menu", icone: <BsMenuUp/>, path: "/menu"},
+        {nome: "Opinião", icone: <MdFeedback/>, path: "/opiniao"},
+        {nome: "Suporte", icone: <BsGear/>, path: "/suporte"},
     ];
 
     const renderList = itensMenu.map((item, index) => (

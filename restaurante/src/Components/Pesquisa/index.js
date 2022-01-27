@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from 'react';
+import {
+    Satisfacao,
+    Titulo,
+    Input,
+    Parametro,
+    NomeParametro,
+    ButtonNota,
+    ButtonEnvio,
+} from './styles';
 
-export default function Informacoes() {
+export default function Pesquisa() {
     const [email, setEmail] = useState("");
     const [notaAtendimento, setAtendimento] = useState(10);
     const [notaSabor, setSabor] = useState(10);
