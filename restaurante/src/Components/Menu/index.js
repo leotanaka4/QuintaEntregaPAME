@@ -15,14 +15,14 @@ import {
     Input,
     ButtonPagamento
 } from './styles';
-import batata from './Imagens/batata-frita.jpg';
-import frango from './Imagens/frango-frito.jpg';
-import burguer from './Imagens/hamburguer.jpg';
-import pizza from './Imagens/pizza.jpg';
-import pf from './Imagens/pf.jpg';
-import suco from './Imagens/suco-de-laranja.jpg';
-import coca from './Imagens/coca-cola.jpg';
-import sorvete from './Imagens/sorvete-de-chocolate.jpg';
+import batata from './../../Imagens/batata-frita.jpg';
+import frango from './../../Imagens/frango-frito.jpg';
+import burguer from './../../Imagens/hamburguer.jpg';
+import pizza from './../../Imagens/pizza.jpg';
+import pf from './../../Imagens/pf.jpg';
+import suco from './../../Imagens/suco-de-laranja.jpg';
+import coca from './../../Imagens/coca-cola.jpg';
+import sorvete from './../../Imagens/sorvete-de-chocolate.jpg';
 
 export default function Informacoes() {
     const [quantity1, setQuantity1] = useState(0);

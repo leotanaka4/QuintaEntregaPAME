@@ -1,16 +1,14 @@
-import './App.css';
-import Header from './Components/Header';
-import Menu from './Components/Menu';
-import Suporte from './Components/Suporte';
-import { Page } from './styles';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './Styles/global';
+import { theme } from './Styles/theme';
+import { AppRoutes } from './Routes/index';
 
 function App() {
   return (
-    <Page>
-      <Header/>
-      <Menu/>
-      <Suporte/>
-    </Page>
+    <ThemeProvider theme={theme}>
+      <AppRoutes/>
+      <GlobalStyle/>
+    </ThemeProvider>
   );
 }
 

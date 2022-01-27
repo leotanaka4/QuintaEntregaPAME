@@ -13,7 +13,7 @@ import {
 export default function Informacoes() {
     const [idproduto, setIdproduto] = useState("");
     const [idfuncionario, setIdfuncionario] = useState("");
-    const [senha, setSenha] = useState(0);
+    const [senha, setSenha] = useState("");
     const [quantity, setQuantity] = useState(0);
     const [actualItem, setActualItem] = useState({});
     const [available, setAvailable] = useState(false);
