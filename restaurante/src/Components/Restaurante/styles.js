@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 export const Rest = styled.div`
-    height: 90%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 2%;
-    padding-bottom: 4%;
-    background-color: white;
+    background-color: antiquewhite;
 `;
 
 export const Imagem = styled.img`
+    border-radius: 10px;
 `;

@@ -9,7 +9,7 @@ export const Menu = styled.div`
     justify-content: space-around;
     align-items: center; 
     width: 100%;
-    background-color: white;
+    background-color: antiquewhite;
     gap: 4vh;
 `;
 
@@ -29,7 +29,7 @@ export const Secao = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: white;
+    background-color: antiquewhite;
 `;
 
 /* Alimento */
@@ -41,7 +41,7 @@ export const Alimento = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 80%;
-    background-color: red;
+    background-color: #ec2300;
 `;
 
 export const InfoAlimento = styled.div`
@@ -54,7 +54,7 @@ export const InfoAlimento = styled.div`
 
 export const NomeAlimento = styled.h3`
     font-size: 32px;
-    color: white;
+    color: antiquewhite;
 `;
 
 export const ImagemAlimento = styled.img`
@@ -63,7 +63,7 @@ export const ImagemAlimento = styled.img`
 
 export const PreçoAlimento = styled.p`
     font-size: 20px;
-    color: white;
+    color: antiquewhite;
 `;
 
 export const QuantidadeAlimento = styled.div`

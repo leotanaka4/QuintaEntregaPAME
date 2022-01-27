@@ -25,14 +25,14 @@ import coca from './../../Imagens/coca-cola.jpg';
 import sorvete from './../../Imagens/sorvete-de-chocolate.jpg';
 
 export default function Informacoes() {
-    const [quantity1, setQuantity1] = useState(0);
-    const [quantity2, setQuantity2] = useState(0);
-    const [quantity3, setQuantity3] = useState(0);
-    const [quantity4, setQuantity4] = useState(0);
-    const [quantity5, setQuantity5] = useState(0);
-    const [quantity6, setQuantity6] = useState(0);
-    const [quantity7, setQuantity7] = useState(0);
-    const [quantity8, setQuantity8] = useState(0);
+    const [qtdBatata, setQtdBatata] = useState(0);
+    const [qtdFrango, setQtdFrango] = useState(0);
+    const [qtdBurguer, setQtdBurguer] = useState(0);
+    const [qtdPizza, setQtdPizza] = useState(0);
+    const [qtdPF, setQtdPF] = useState(0);
+    const [qtdSuco, setQtdSuco] = useState(0);
+    const [qtdCoca, setQtdCoca] = useState(0);
+    const [qtdSorvete, setQtdSorvete] = useState(0);
     const [nome, setNome] = useState("");
     const [actualItem, setActualItem] = useState({});
     const [available, setAvailable] = useState(false);
@@ -41,41 +41,41 @@ export default function Informacoes() {
         funcao(quantidade + 1);
     }
     function decrement(quantidade, funcao) {
-        if (quantidade === 0){
+        if (!quantidade){
             console.log("Erro ao diminuir a quantidade de alimentos")
         } else{
             funcao(quantidade - 1)
         }
     }
     function Pagar(){/*Simula o envio da Informação*/
-        setQuantity1(0);
-        setQuantity2(0);
-        setQuantity3(0);
-        setQuantity4(0);
-        setQuantity5(0);
-        setQuantity6(0);
-        setQuantity7(0);
-        setQuantity8(0);
+        setQtdBatata(0);
+        setQtdFrango(0);
+        setQtdBurguer(0);
+        setQtdPizza(0);
+        setQtdPF(0);
+        setQtdSuco(0);
+        setQtdCoca(0);
+        setQtdSorvete(0);
         setNome("")
     }
     useEffect(() => {
         setActualItem({
-            q1: quantity1,
-            q2: quantity2,
-            q3: quantity3,
-            q4: quantity4,
-            q5: quantity5,
-            q6: quantity6,
-            q7: quantity7,
-            q8: quantity8,
-            cliente: nome
+            q1: qtdBatata,
+            q2: qtdFrango,
+            q3: qtdBurguer,
+            q4: qtdPizza,
+            q5: qtdPF,
+            q6: qtdSuco,
+            q7: qtdCoca,
+            q8: qtdSorvete,
+            cliente: nome,
         });
-        if (!nome || ((quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6 + quantity7 + quantity8) === 0)){
+        if (!nome || ((qtdBatata + qtdFrango + qtdBurguer + qtdPizza + qtdPF + qtdSuco + qtdCoca + qtdSorvete) === 0)){
             setAvailable(false)
         } else{
             setAvailable(true)
         }
-    }, [quantity1, quantity2, quantity3, quantity4, quantity5, quantity6, quantity7, quantity8, nome]);
+    }, [qtdBatata, qtdFrango, qtdBurguer, qtdPizza, qtdPF, qtdSuco, qtdCoca, qtdSorvete, nome]);
     return(
     <Menu>
         <Titulo>Faça o pedido por esse menu:</Titulo>
@@ -88,9 +88,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 10,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity1}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity1, setQuantity1)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity1, setQuantity1)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdBatata}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdBatata, setQtdBatata)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdBatata, setQtdBatata)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -100,9 +100,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 15,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity2}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity2, setQuantity2)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity2, setQuantity2)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdFrango}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdFrango, setQtdFrango)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdFrango, setQtdFrango)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -115,9 +115,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 25,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity3}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity3, setQuantity3)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity3, setQuantity3)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdBurguer}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdBurguer, setQtdBurguer)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdBurguer, setQtdBurguer)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -127,9 +127,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 40,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity4}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity4, setQuantity4)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity4, setQuantity4)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdPizza}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdPizza, setQtdPizza)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdPizza, setQtdPizza)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -139,9 +139,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 20,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity5}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity5, setQuantity5)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity5, setQuantity5)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdPF}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdPF, setQtdPF)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdPF, setQtdPF)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -154,9 +154,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 8,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity6}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity6, setQuantity6)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity6, setQuantity6)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdSuco}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdSuco, setQtdSuco)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdSuco, setQtdSuco)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
             <Alimento>
@@ -166,9 +166,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 5,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity7}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity7, setQuantity7)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity7, setQuantity7)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdCoca}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdCoca, setQtdCoca)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdCoca, setQtdCoca)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>
@@ -181,9 +181,9 @@ export default function Informacoes() {
                     <PreçoAlimento>R$ 10,00</PreçoAlimento>
                 </InfoAlimento>
                 <QuantidadeAlimento>
-                    <Quantity>Quantidade: {quantity8}</Quantity>
-                    <QuantityButton onClick={() => increment(quantity8, setQuantity8)}>+</QuantityButton>
-                    <QuantityButton onClick={() => decrement(quantity8, setQuantity8)}>-</QuantityButton>
+                    <Quantity>Quantidade: {qtdSorvete}</Quantity>
+                    <QuantityButton onClick={() => increment(qtdSorvete, setQtdSorvete)}>+</QuantityButton>
+                    <QuantityButton onClick={() => decrement(qtdSorvete, setQtdSorvete)}>-</QuantityButton>
                 </QuantidadeAlimento>
             </Alimento>
         </Secao>

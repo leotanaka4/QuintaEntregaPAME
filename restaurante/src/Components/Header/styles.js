@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Head = styled.header`
-    height: 10%;
+    height: 20vh;
     display: flex;
     justify-content: space-between;
-    padding-top: 4%;
-    padding-bottom: 2%;
-    background-color: red;
+    align-items: center;
+    background-color: #ec2300;
+    
 `;
 
 export const HeaderName = styled.h1`
@@ -22,10 +22,17 @@ export const HeaderMenu = styled.ul`
 `;
 
 export const MenuItem = styled.h3`
-    height: 5vh;
     cursor: pointer;
     &:hover{
         color: antiquewhite;
         border-bottom: 2px solid silver;
+    }
+    a{
+        text-decoration: none;
+        color: antiquewhite;
+        transition: filter 0.2s;
+    }
+    a:hover{
+        filter: brightness(0.8);
     }
 `;
