@@ -192,7 +192,7 @@ export default function Informacoes() {
             value={nome}
             onChange={(event) => setNome(event.currentTarget.value)}
         />
-        <ButtonPagamento onClick={Pagar} disabled={!available}>Pagamento</ButtonPagamento>
+        <ButtonPagamento onClick={Pagar} disabled={!available}>Finalizar Pedido</ButtonPagamento>
     </Menu>
     );
 }

@@ -2,12 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {AiOutlineHome} from 'react-icons/ai';
 import {BsGear, BsMenuUp} from 'react-icons/bs';
+import {MdFeedback} from 'react-icons/md';
 import {MenuItem, Head, HeaderName, HeaderMenu} from './styles';
 
 export default function Header() {
     const itensMenu = [
         {nome: "Home", icone: <AiOutlineHome/>, path: "/"},
         {nome: "Menu", icone: <BsMenuUp/>, path: "/Menu"},
+        {nome: "Opinião", icone: <MdFeedback/>, path: "/Opiniao"},
         {nome: "Suporte", icone: <BsGear/>, path: "/Suporte"},
     ];
 

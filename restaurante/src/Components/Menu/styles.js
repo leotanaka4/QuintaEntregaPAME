@@ -107,7 +107,7 @@ export const ButtonPagamento = styled.button`
     background-color: ${props => props.disabled ? "red" : "green"};
     border: none;
     cursor: pointer;
-    width: 10vw;
+    width: 20vw;
     height: 5vh;
     border-radius: 10px;
     font-size: large;
