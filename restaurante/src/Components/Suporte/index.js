@@ -12,6 +12,7 @@ import {
 
 export default function Informacoes() {
     const [idproduto, setIdproduto] = useState("");
+    const [dataValidade, setDataValidade] = useState("");
     const [idfuncionario, setIdfuncionario] = useState("");
     const [senha, setSenha] = useState("");
     const [quantity, setQuantity] = useState(0);
@@ -28,6 +29,7 @@ export default function Informacoes() {
 
     function Enviar(){/*Simula o envio da Informação*/
         setIdproduto("");
+        setDataValidade("");
         setIdfuncionario("");
         setSenha("");
         setQuantity(0)
@@ -36,17 +38,18 @@ export default function Informacoes() {
     useEffect(() => {
         setActualItem({
             idp: idproduto,
+            data: dataValidade,
             idf: idfuncionario,
             chave: senha,
             quantidade: quantity
         });
 
-        if (!idproduto || !idfuncionario || !senha || quantity === 0){
+        if (!idproduto || !dataValidade || !idfuncionario || !senha || !quantity){
             setAvailable(false)
         } else{
             setAvailable(true)
         }
-    }, [idproduto, idfuncionario, senha, quantity]);
+    }, [idproduto, dataValidade, idfuncionario, senha, quantity]);
     return(
     <Footer>
         <FooterName>Suporte</FooterName>
@@ -55,6 +58,11 @@ export default function Informacoes() {
                 placeholder="ID do Produto"
                 value={idproduto}
                 onChange={(event) => setIdproduto(event.currentTarget.value)}
+            />
+            <Input
+                placeholder="Data de Validade"
+                value={dataValidade}
+                onChange={(event) => setDataValidade(event.currentTarget.value)}
             />
             <Input
                 placeholder="ID do Funcionário(a)"
